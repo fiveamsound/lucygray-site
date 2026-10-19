@@ -1231,7 +1231,7 @@ input:focus,textarea:focus {
 
   .mh-tartan {
     z-index:1;
-    top:2.6%;
+    top:5.4%;
     right:0;
     width:55%;
     height:17.8%;
@@ -1241,7 +1241,7 @@ input:focus,textarea:focus {
 
   .mh-type {
     z-index:3;
-    top:7.4%;
+    top:10.2%;
     right:0;
     width:62%
   }
@@ -1266,8 +1266,8 @@ input:focus,textarea:focus {
   .mh-keyboard {
     z-index:2;
     right:0;
-    top:38%;
-    width:22%
+    top:36%;
+    width:27%
   }
 
   .mh-figure {
