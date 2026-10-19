@@ -1,6 +1,6 @@
 "use client";
 
-const EMAIL = "h@fiveammusic.com";
+const EMAIL = "lucygraymusicemail@gmail.com";
 
 export default function ContactMailForm() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
