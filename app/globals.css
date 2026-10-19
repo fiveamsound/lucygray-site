@@ -1189,12 +1189,11 @@ input:focus,textarea:focus {
     inset:auto;
     top:50%;
     left:0;
-    height:58%;
+    height:80%;
     width:auto;
     aspect-ratio:16 / 9;
     transform:translateY(-50%);
-    clip-path:inset(0 76% 0 0);
-    mix-blend-mode:multiply
+    clip-path:inset(0 76% 0 0)
   }
 
   .nav-music { left:0; top:10.5%; width:20%; height:19.5% }
