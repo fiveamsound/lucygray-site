@@ -21,6 +21,7 @@ export default function HomePage() {
     <main className="home">
       <ShowBanner />
       <div className="home-stage cover-stage">
+        <img className="cover-under" src="/music-bg.jpg" alt="" />
         <div className="cover-art">
           <img
             className="home-bg"
