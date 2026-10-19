@@ -1242,7 +1242,7 @@ input:focus,textarea:focus {
   .mh-type {
     z-index:3;
     top:auto;
-    bottom:calc(100% - 8.8% - 17.8%);
+    bottom:calc(100% - 8.8% - 17.8% - 2.4%);
     right:0;
     width:62%
   }
@@ -1267,8 +1267,8 @@ input:focus,textarea:focus {
   .mh-keyboard {
     z-index:2;
     right:0;
-    top:38%;
-    width:25%
+    top:35%;
+    width:32%
   }
 
   .mh-figure {
