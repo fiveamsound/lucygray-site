@@ -20,43 +20,45 @@ export default function HomePage() {
   return (
     <main className="home">
       <ShowBanner />
-      <div className="home-stage">
-        <img
-          className="home-bg"
-          src="/home-bg.jpg"
-          alt="Lucy Gray — music, merch, shows, and contact"
-        />
+      <div className="home-stage cover-stage">
+        <div className="cover-art">
+          <img
+            className="home-bg"
+            src="/home-bg.jpg"
+            alt="Lucy Gray — music, merch, shows, and contact"
+          />
 
-        <nav className="home-nav" aria-label="Main navigation">
-          {navHits.map((item) => {
-            if (item.href.startsWith("http")) {
+          <nav className="home-nav" aria-label="Main navigation">
+            {navHits.map((item) => {
+              if (item.href.startsWith("http")) {
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className={`nav-hit ${item.className}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span>{item.label}</span>
+                  </a>
+                );
+              }
               return (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   className={`nav-hit ${item.className}`}
-                  target="_blank"
-                  rel="noreferrer"
                 >
                   <span>{item.label}</span>
-                </a>
+                </Link>
               );
-            }
-            return (
-              <Link
-                key={item.label}
-                href={item.href}
-                className={`nav-hit ${item.className}`}
-              >
-                <span>{item.label}</span>
-              </Link>
-            );
-          })}
-        </nav>
+            })}
+          </nav>
 
-        <button type="button" className="end-hit">
-          <span>End</span>
-        </button>
+          <button type="button" className="end-hit">
+            <span>End</span>
+          </button>
+        </div>
       </div>
     </main>
   );

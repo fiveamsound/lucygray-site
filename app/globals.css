@@ -13,7 +13,9 @@
   --blue:#65bdd2;
   --pink:#d482a6;
   --line:#1514192e;
-  --font-display:"Disgored", Georgia, "Times New Roman", serif
+  --font-display:"Disgored", Georgia, "Times New Roman", serif;
+  --banner:28px;
+  --banner-space:calc(var(--banner) + env(safe-area-inset-top, 0px))
 }
 
 * {
@@ -22,14 +24,17 @@
 
 html {
   background:var(--paper);
-  scroll-behavior:smooth
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%
 }
 
 body {
   background:var(--paper);
   color:var(--ink);
   margin:0;
-  font-family:Arial,Helvetica,sans-serif
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden
 }
 
 a {
@@ -72,7 +77,8 @@ button,summary,a {
   overflow:hidden;
   align-items:center;
   width:100%;
-  height:28px;
+  height:var(--banner-space);
+  padding-top:env(safe-area-inset-top, 0px);
   background:#000;
   color:#fff;
   display:flex
@@ -114,9 +120,14 @@ button,summary,a {
 
 .home-stage {
   position:relative;
-  width:min(100vw, calc((100svh - 28px) * 16 / 9));
+  width:min(100vw, calc((100svh - var(--banner-space)) * 16 / 9));
   aspect-ratio:16 / 9;
   flex:none
+}
+
+.cover-art {
+  position:absolute;
+  inset:0
 }
 
 .home-bg {
@@ -301,7 +312,14 @@ button,summary,a {
   margin:0;
   background:transparent;
   cursor:pointer;
-  font:inherit
+  font:inherit;
+  touch-action:manipulation
+}
+
+.music-btn,
+.contact-compose .button,
+.top-banner {
+  touch-action:manipulation
 }
 
 .nav-hit span,
@@ -1126,6 +1144,127 @@ input:focus,textarea:focus {
     padding:13vw
   }
 
+}
+
+@media (max-width:820px) {
+  :root {
+    --banner:34px
+  }
+
+  .home {
+    overflow-x:hidden;
+    overflow-y:auto
+  }
+
+  .cover-stage {
+    width:100vw;
+    max-width:100%;
+    height:calc(100svh - var(--banner-space));
+    height:calc(100dvh - var(--banner-space));
+    aspect-ratio:auto;
+    overflow:hidden
+  }
+
+  .cover-art {
+    inset:auto;
+    top:0;
+    left:0;
+    height:100%;
+    width:auto;
+    aspect-ratio:16 / 9
+  }
+
+  .nav-music { left:0; top:10.5%; width:20%; height:19.5% }
+  .nav-merch { left:0; top:29.5%; width:20%; height:19.5% }
+  .nav-shows { left:0; top:48.5%; width:20%; height:19.5% }
+  .nav-contact { left:0; top:67%; width:20%; height:20% }
+
+  .end-hit {
+    display:none
+  }
+
+  .home-stage.music-stage {
+    width:100vw;
+    max-width:100%;
+    aspect-ratio:auto;
+    min-height:calc(100svh - var(--banner-space));
+    min-height:calc(100dvh - var(--banner-space));
+    flex-direction:column;
+    justify-content:center;
+    gap:3.5vh;
+    padding:5vh 7vw calc(5vh + env(safe-area-inset-bottom, 0px))
+  }
+
+  .music-stage .home-bg {
+    object-fit:cover;
+    object-position:center top
+  }
+
+  .music-btn {
+    flex:0 0 auto;
+    width:min(82%, 360px);
+    max-width:min(82%, 360px);
+    height:auto;
+    margin-inline:auto
+  }
+
+  .music-btn img {
+    max-width:100%;
+    max-height:34svh
+  }
+
+  .break-it-locked {
+    max-width:min(86vw, 420px);
+    max-height:68svh
+  }
+
+  .home-stage:has(.contact-compose) {
+    width:100vw;
+    max-width:100%;
+    aspect-ratio:auto;
+    min-height:calc(100svh - var(--banner-space));
+    min-height:calc(100dvh - var(--banner-space))
+  }
+
+  .home-stage:has(.contact-compose) .home-bg {
+    object-fit:cover;
+    object-position:center top
+  }
+
+  .contact-compose {
+    position:relative;
+    top:auto;
+    left:auto;
+    width:min(88%, 420px);
+    margin:8vh auto 6vh;
+    padding-bottom:env(safe-area-inset-bottom, 0px)
+  }
+
+  .contact-title {
+    width:min(100%, 240px)
+  }
+
+  .contact-compose input,
+  .contact-compose textarea {
+    font-size:16px;
+    min-height:48px;
+    padding:14px
+  }
+
+  .contact-compose textarea {
+    min-height:148px
+  }
+
+  .contact-compose .button {
+    min-height:48px;
+    min-width:128px
+  }
+
+  .top-banner-track span {
+    font-size:12px;
+    letter-spacing:.2em;
+    padding:0 1.8em
+  }
 }
 
 @media (prefers-reduced-motion:reduce) {
