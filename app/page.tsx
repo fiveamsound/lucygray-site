@@ -29,17 +29,6 @@ export default function HomePage() {
 
         <nav className="home-nav" aria-label="Main navigation">
           {navHits.map((item) => {
-            if (!item.href) {
-              return (
-                <button
-                  key={item.label}
-                  type="button"
-                  className={`nav-hit ${item.className}`}
-                >
-                  <span>{item.label}</span>
-                </button>
-              );
-            }
             if (item.href.startsWith("http")) {
               return (
                 <a
