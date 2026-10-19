@@ -1241,7 +1241,8 @@ input:focus,textarea:focus {
 
   .mh-type {
     z-index:3;
-    top:9.2%;
+    top:auto;
+    bottom:calc(100% - 8.8% - 17.8%);
     right:0;
     width:62%
   }
