@@ -330,9 +330,9 @@ button,summary,a {
   z-index:4;
   left:2%;
   top:9%;
-  height:81%;
+  height:72%;
   width:auto;
-  max-width:21%;
+  max-width:18.5%;
   object-fit:contain;
   object-position:left top;
   image-rendering:auto;
@@ -376,10 +376,10 @@ button,summary,a {
   clip:rect(0 0 0 0)
 }
 
-.nav-music { left:1.6%; top:10%; width:20%; height:19.6% }
-.nav-merch { left:1.6%; top:29.6%; width:20%; height:19.6% }
-.nav-shows { left:1.6%; top:49.2%; width:20%; height:19.6% }
-.nav-contact { left:1.6%; top:68.8%; width:20%; height:20% }
+.nav-music { left:1.6%; top:9.9%; width:18%; height:17.4% }
+.nav-merch { left:1.6%; top:27.3%; width:18%; height:17.4% }
+.nav-shows { left:1.6%; top:44.7%; width:18%; height:17.4% }
+.nav-contact { left:1.6%; top:62.1%; width:18%; height:17.8% }
 
 .end-hit {
   left:79.6%;
@@ -1265,9 +1265,9 @@ input:focus,textarea:focus {
 
   .mh-keyboard {
     z-index:2;
-    right:-2%;
-    top:50%;
-    width:34%
+    right:0;
+    top:38%;
+    width:22%
   }
 
   .mh-figure {
