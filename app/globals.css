@@ -1265,9 +1265,9 @@ input:focus,textarea:focus {
 
   .mh-keyboard {
     z-index:2;
-    right:-8%;
-    top:44%;
-    width:52%
+    right:-2%;
+    top:50%;
+    width:34%
   }
 
   .mh-figure {
