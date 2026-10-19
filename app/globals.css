@@ -298,6 +298,40 @@ button,summary,a {
   filter:brightness(1.08)
 }
 
+.home-nav-mask {
+  position:absolute;
+  z-index:3;
+  left:0;
+  top:7%;
+  bottom:0;
+  width:24%;
+  background:#fff;
+  pointer-events:none
+}
+
+.home-nav-mask::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:155%;
+  height:48%;
+  background:#fff
+}
+
+.home-nav-art {
+  position:absolute;
+  z-index:4;
+  left:2%;
+  top:9%;
+  height:81%;
+  width:auto;
+  max-width:21%;
+  object-fit:contain;
+  object-position:left top;
+  pointer-events:none
+}
+
 .home-nav {
   position:absolute;
   inset:0;
@@ -335,10 +369,10 @@ button,summary,a {
   clip:rect(0 0 0 0)
 }
 
-.nav-music { left:2.2%; top:13.2%; width:16.8%; height:16.2% }
-.nav-merch { left:2.2%; top:31.4%; width:16.8%; height:16.8% }
-.nav-shows { left:2.2%; top:49.8%; width:16.8%; height:16.6% }
-.nav-contact { left:2.2%; top:68.2%; width:16.2%; height:16.4% }
+.nav-music { left:1.6%; top:10%; width:20%; height:19.6% }
+.nav-merch { left:1.6%; top:29.6%; width:20%; height:19.6% }
+.nav-shows { left:1.6%; top:49.2%; width:20%; height:19.6% }
+.nav-contact { left:1.6%; top:68.8%; width:20%; height:20% }
 
 .end-hit {
   left:79.6%;

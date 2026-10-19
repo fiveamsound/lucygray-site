@@ -28,6 +28,8 @@ export default function HomePage() {
             src="/home-bg.jpg"
             alt="Lucy Gray — music, merch, shows, and contact"
           />
+          <div className="home-nav-mask" aria-hidden="true" />
+          <img className="home-nav-art" src="/home-nav.png" alt="" />
 
           <nav className="home-nav" aria-label="Main navigation">
             {navHits.map((item) => {
