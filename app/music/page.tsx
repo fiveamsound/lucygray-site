@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ShowBanner from "@/components/ShowBanner";
 
 export const metadata: Metadata = {
@@ -21,12 +22,12 @@ export default function MusicPage() {
         >
           <img src="/break-it-stream.png?v=3" alt="Break it — Stream the album" />
         </a>
-        <button className="music-btn" type="button">
+        <Link className="music-btn" href="/break-it">
           <img
             src="/break-it-game.png?v=12"
             alt="Explore the world of Break it — Press to enter"
           />
-        </button>
+        </Link>
       </div>
     </main>
   );

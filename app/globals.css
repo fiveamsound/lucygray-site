@@ -172,6 +172,17 @@ button,summary,a {
   transform:scale(1.04)
 }
 
+.break-it-locked {
+  z-index:6;
+  position:relative;
+  width:auto;
+  height:auto;
+  max-width:min(54%, 72svh);
+  max-height:82%;
+  object-fit:contain;
+  pointer-events:none
+}
+
 .presave-link {
   position:absolute;
   z-index:7;

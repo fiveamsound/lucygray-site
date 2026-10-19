@@ -4,7 +4,7 @@ import ShowBanner from "@/components/ShowBanner";
 const navHits = [
   { href: "/music", label: "music", className: "nav-music" },
   {
-    href: "https://www.fiveam.music/store/lucy-gray-keychain",
+    href: "https://www.fiveam.music/store/lucy-gray-break-it-t-shirt",
     label: "merch",
     className: "nav-merch",
   },
